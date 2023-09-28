@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import { Container, useMantineColorScheme, Button, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
+import { IconSun, IconMoon } from '@tabler/icons-react';
+import cx from 'clsx';
 import classes from '../css/HeaderSimple.module.css';
 
 const links = [
@@ -27,6 +29,8 @@ export default function Header() {
       {link.label}
     </a>
   ));
+    
+  const { toggleColorScheme } = useMantineColorScheme();
 
   return (
     <header className={classes.header}>
@@ -34,6 +38,10 @@ export default function Header() {
         <MantineLogo size={28} />
         <Group gap={5} visibleFrom="xs">
           {items}
+          <Button onClick={() => toggleColorScheme()}>
+          <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
+          <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
+          </Button>
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />

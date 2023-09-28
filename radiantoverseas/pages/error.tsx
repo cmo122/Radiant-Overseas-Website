@@ -1,10 +1,15 @@
-import { Container, Title, Text, Button, Group, MantineProvider } from '@mantine/core';
+import { Container, Title, Text, Button, Group, MantineProvider, MantineProviderProps } from '@mantine/core';
 import { Illustration } from '../app/assets/logos/ErrorIllustration';
 import classes from '../app/css/NothingFoundBackground.module.css';
 
 export default function NothingFoundBackground() {
+
+  const customTheme = {
+    colorScheme: 'dark',
+  } as MantineProviderProps['theme'];
+
   return (
-    <MantineProvider>
+    <MantineProvider theme={customTheme}>
       <Container className={classes.root}>
         <div className={classes.inner}>
           <Illustration className={classes.image} />
