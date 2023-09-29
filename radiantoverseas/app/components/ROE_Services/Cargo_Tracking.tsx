@@ -1,5 +1,8 @@
 import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
 
+export const cargoTrackingDescription=`Our advanced tracking system puts you in control. 
+Monitor your cargo in real-time, 24/7. With us, you'll never lose sight of your shipments, no matter where they are in the world.`
+
 export const cargoTrackingIconFeatures = [
   {
     icon: IconReceiptOff,

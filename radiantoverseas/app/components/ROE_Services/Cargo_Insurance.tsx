@@ -1,8 +1,9 @@
-import { Title, SimpleGrid, Text, Button, ThemeIcon, Grid, rem } from '@mantine/core';
 import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
-import classes from '../../css/FeaturesTitle.module.css';
 
-const features = [
+export const cargoInsuranceDescription=`Protect your valuable cargo with our comprehensive insurance solutions. 
+We offer coverage that goes the extra mile, providing you peace of mind on every journey your goods undertake.`
+
+export const cargoInsuranceIconFeatures = [
   {
     icon: IconReceiptOff,
     title: 'Free and open source',
@@ -16,57 +17,11 @@ const features = [
   {
     icon: IconCircleDotted,
     title: 'No annoying focus ring',
-    description:
-      'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
+    description: 'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
   },
   {
     icon: IconFlame,
     title: 'Flexible',
-    description:
-      'Customize colors, spacing, shadows, fonts and many other settings with global theme object',
+    description: 'Customize colors, spacing, shadows, fonts and many other settings with global theme object',
   },
 ];
-
-export default function CargoInsuranceCard() {
-  const items = features.map((feature) => (
-    <div key={feature.title}>
-      <ThemeIcon
-        size={44}
-        radius="md"
-        variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
-      >
-        <feature.icon style={{ width: rem(26), height: rem(26) }} stroke={1.5} />
-      </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={500}>
-        {feature.title}
-      </Text>
-      <Text c="dimmed" fz="sm">
-        {feature.description}
-      </Text>
-    </div>
-  ));
-
-  return (
-    <div className={classes.wrapper}>
-      <Grid gutter={80}>
-        
-        
-        <Grid.Col span={{ base: 12, md: 5 }}>
-          <Title className={classes.title} order={2}>
-            CARGO INSURANCE
-          </Title>
-          <Text c="dimmed">
-            Fast and painless 
-          </Text>
-        </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 7 }}>
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
-            {items}
-          </SimpleGrid>
-        </Grid.Col>
-      </Grid>
-      
-    </div>
-  );
-}

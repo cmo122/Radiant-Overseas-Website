@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, useMantineColorScheme, Button, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantine/ds';
+import {IconPackage} from '@tabler/icons-react'
 import { IconSun, IconMoon } from '@tabler/icons-react';
 import cx from 'clsx';
 import classes from '../css/HeaderSimple.module.css';
@@ -35,7 +35,15 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <MantineLogo size={28} />
+        <Group>
+          <IconPackage size={40} />
+          <h3 style={{
+                    color: 'linear-gradient(to right, yellow, blue, orange)',
+                    fontFamily: 'Futura, sans-serif',
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                  }}>Radiant Overseas Express</h3>
+        </Group>
         <Group gap={5} visibleFrom="xs">
           {items}
           <Button onClick={() => toggleColorScheme()}>

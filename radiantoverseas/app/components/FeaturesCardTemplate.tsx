@@ -1,8 +1,11 @@
-import { Title, SimpleGrid, Text, Button, ThemeIcon, Grid, rem } from '@mantine/core';
+import { Title, SimpleGrid, Text, ThemeIcon, Grid, rem } from '@mantine/core';
 import classes from '../css/FeaturesTitle.module.css';
+import { BackgroundImage } from '@mantine/core';
+import { TablerIconsProps } from '@tabler/icons-react';
+import { StaticImageData } from 'next/image';
 
 type FeatureData = {
-    icon: any;
+    icon: (props: TablerIconsProps) => JSX.Element;
     title: string;
     description: string;
   };
@@ -10,7 +13,9 @@ type FeatureData = {
 type FeaturesCardData={
     mainTitle:string,
     mainDescription:string,
-    featuresArray:FeatureData[]
+    featuresArray:FeatureData[],
+    reversed:boolean,
+    bgimage:StaticImageData
 }
 
 export function FeaturesCardTemplate({ features }: { features: FeaturesCardData }) {
@@ -34,8 +39,17 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
   ));
 
   return (
-    <div className={classes.wrapper}>
-      <Grid gutter={80}>
+    <div className={classes.wrapper} >
+      {features.reversed && (
+        <Grid gutter={80} >
+          <Grid.Col span={{ base: 12, md: 7 }}>
+          
+          <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
+            {items}
+          </SimpleGrid>
+          
+          </Grid.Col>
+
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} order={2}>
             {features.mainTitle}
@@ -43,23 +57,31 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
           <Text c="dimmed">
             {features.mainDescription}
           </Text>
-
-          <Button
-            variant="gradient"
-            gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
-            size="lg"
-            radius="md"
-            mt="xl"
-          >
-            Get started
-          </Button>
         </Grid.Col>
+        
+      </Grid>
+      )}
+      
+
+      {!features.reversed &&(
+      <Grid gutter={80} style={{backgroundImage: `url(${features.bgimage.src})`, backgroundSize: 'cover',backgroundRepeat:"no-repeat", color: "white"}}>
+        <Grid.Col span={{ base: 12, md: 5 } }
+        >
+          <Title className={classes.title} order={2} >
+            {features.mainTitle}
+          </Title>
+          <Text c="dimmed">
+            {features.mainDescription}
+          </Text>
+        
+        </Grid.Col>
+
         <Grid.Col span={{ base: 12, md: 7 }}>
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
             {items}
           </SimpleGrid>
         </Grid.Col>
-      </Grid>
+      </Grid>)}
     </div>
   );
 }

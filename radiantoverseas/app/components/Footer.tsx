@@ -1,6 +1,5 @@
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { Text, Container, Group } from '@mantine/core';
+import {IconPackage} from '@tabler/icons-react'
 import classes from '../css/FooterLinks.module.css';
 
 const data = [
@@ -59,7 +58,15 @@ export default function Footer() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo size={30} />
+        <Group>
+          <IconPackage size={40} />
+          <h3 style={{
+                    color: 'linear-gradient(to right, yellow, blue, orange)',
+                    fontFamily: 'Futura, sans-serif',
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                  }}>Radiant Overseas Express</h3>
+        </Group>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>

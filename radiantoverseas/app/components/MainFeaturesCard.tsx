@@ -1,5 +1,4 @@
 import {
-    Badge,
     Group,
     Title,
     Text,
