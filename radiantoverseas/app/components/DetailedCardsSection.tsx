@@ -15,6 +15,10 @@ type FeatureData = {
     description: string;
   };
 
+  const defaultFeaturesCardData: Partial<FeaturesCardData> = {
+    reversed: false,
+  };
+
   type FeaturesCardData={
     mainTitle:string,
     mainDescription:string,
@@ -24,9 +28,9 @@ type FeatureData = {
 }
 
 const cargoTrackingFeatures:FeaturesCardData={mainTitle:'CARGO TRACKING', mainDescription:cargoTrackingDescription, featuresArray:cargoTrackingIconFeatures, reversed:false, bgimage:cargoTrackingImage}
-const cargoInsuranceFeatures:FeaturesCardData={mainTitle:'CARGO INSURANCE', mainDescription:cargoInsuranceDescription,featuresArray:cargoInsuranceIconFeatures, reversed:true, bgimage:cargoTrackingImage}
+const cargoInsuranceFeatures:FeaturesCardData={mainTitle:'CARGO INSURANCE', mainDescription:cargoInsuranceDescription,featuresArray:cargoInsuranceIconFeatures, reversed:false, bgimage:cargoTrackingImage}
 const customsClearanceFeatures:FeaturesCardData={mainTitle:'CUSTOMS CLEARANCE', mainDescription:customsDescription,featuresArray:customsIconFeatures, reversed:false, bgimage:cargoTrackingImage}
-const transportRoutingFeatures:FeaturesCardData={mainTitle:'TRANSPORTATION ROUTING', mainDescription:transportRoutingDescription,featuresArray:transportRoutingIconFeatures, reversed:true, bgimage:cargoTrackingImage}
+const transportRoutingFeatures:FeaturesCardData={mainTitle:'TRANSPORTATION ROUTING', mainDescription:transportRoutingDescription,featuresArray:transportRoutingIconFeatures, reversed:false, bgimage:cargoTrackingImage}
 const consDeconsFeatures:FeaturesCardData={mainTitle:'CONSOLIDATION AND DECONSOLIDATION', mainDescription:consolidationDescription,featuresArray:consolidationIconFeatures, reversed:false, bgimage:cargoTrackingImage}
 
 const allFeatures=[cargoTrackingFeatures, cargoInsuranceFeatures, customsClearanceFeatures, transportRoutingFeatures, consDeconsFeatures]
@@ -36,7 +40,10 @@ export default function DetailedCardsSection(){
         <>
             {allFeatures.map((features,index)=>(
                 <div key={index}>
-                    <FeaturesCardTemplate features={features}/>
+                    <FeaturesCardTemplate features={{
+                    ...features,
+                    reversed: index % 2 === 0,
+                    }}/>
                 </div>
             ))}
         </>

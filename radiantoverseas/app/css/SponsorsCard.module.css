@@ -1,0 +1,28 @@
+.card {
+    height: rem(100px);
+    width: rem(200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    margin:1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; 
+  }
+
+  .card:hover{
+    filter:none;
+  }
+
+  .card {
+    @mixin dark {
+        box-shadow: 0 5px 10px rgba(0, 128, 128, 0.05), 0 15px 40px rgba(0, 139, 139, 0.2);
+        background-color:rgba(128, 128, 128, 1)
+    }
+    @mixin light {
+        box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+      }
+
+  }

@@ -64,7 +64,7 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
       
 
       {!features.reversed &&(
-      <Grid gutter={80} style={{backgroundImage: `url(${features.bgimage.src})`, backgroundSize: 'cover',backgroundRepeat:"no-repeat", color: "white"}}>
+      <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 } }
         >
           <Title className={classes.title} order={2} >

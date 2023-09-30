@@ -23,16 +23,6 @@ export function HeroImageRight() {
             <Text className={classes.description} mt={30}>
               Lorem ipsum
             </Text>
-
-            <Button
-              variant="gradient"
-              gradient={{ from: 'pink', to: 'yellow' }}
-              size="xl"
-              className={classes.control}
-              mt={40}
-            >
-              Our Carriers
-            </Button>
           </div>
         </div>
       </Container>
