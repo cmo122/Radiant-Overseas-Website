@@ -1,15 +1,17 @@
 import React from 'react'
 import { SponsorsCard } from './SponsorsCard'
-import maerskLogo from '../assets/logos/maersk.png'
-import { Text } from '@mantine/core'
-
-const maerskDetails={name:"Maersk",logo:maerskLogo,link:"/"}
+import { Text, SimpleGrid, Paper } from '@mantine/core'
+import { carrierDetailsList } from './Carriers List/carrierDetailsList'
 
 export default function SponsorsSection(){
     return(
-        <div>
-            <Text ta="center" fz="36px" fw="900">Trusted by world renowned carriers for over a decade        </Text>
-            <SponsorsCard details={maerskDetails}/>
-        </div>
+            <Paper mb="lg">
+                <Text p="xl" ta="center" fz="36px" fw="900" td="underline">Trusted by world renowned carriers for over 10 years</Text>
+                <SimpleGrid spacing="lg" ta="center" cols={6}>
+                    {carrierDetailsList.map((details,index)=>(
+                        <SponsorsCard details={details}/>
+                    ))}
+                </SimpleGrid>
+            </Paper>
     )
 }

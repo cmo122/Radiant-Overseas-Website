@@ -20,16 +20,7 @@ const data = [
       { label: 'Changelog', link: '#' },
       { label: 'Releases', link: '#' },
     ],
-  },
-  {
-    title: 'Contact Us',
-    links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
-    ],
-  },
+  }
 ];
 
 export default function Footer() {

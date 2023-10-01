@@ -8,5 +8,10 @@
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: var(--mantine-spacing-md);
-    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    color: #333333;
+  }
+
+  .description{
+    color: #333333;
+    font-weight: 600;
   }

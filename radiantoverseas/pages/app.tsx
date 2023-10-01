@@ -1,5 +1,5 @@
 import React from "react";
-import { MantineProvider} from '@mantine/core';
+import { MantineProvider, Text} from '@mantine/core';
 import Header from "@/app/components/Header";
 import { HeroImageRight } from "@/app/components/Hero";
 import MainFeaturesCard from "@/app/components/MainFeaturesCard";
@@ -17,6 +17,7 @@ export default function App() {
                 <HeroImageRight/>
                 <MainFeaturesCard/>
                 <SponsorsSection/>
+                <Text p="xl" ta="center" td="underline" fz="36px" fw="900">Our Expertise</Text>
                 <DetailedCardsSection/>
                 <GetInTouch/>
                 <Footer/>
