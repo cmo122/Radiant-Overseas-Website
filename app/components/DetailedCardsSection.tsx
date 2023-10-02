@@ -24,10 +24,6 @@ type FeatureData = {
     description: string;
   };
 
-  const defaultFeaturesCardData: Partial<FeaturesCardData> = {
-    reversed: false,
-  };
-
   type FeaturesCardData={
     mainTitle:string,
     mainDescription:string,

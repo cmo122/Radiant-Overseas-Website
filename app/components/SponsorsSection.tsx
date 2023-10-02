@@ -8,8 +8,8 @@ export default function SponsorsSection(){
             <Paper mb="lg">
                 <Text p="xl" ta="center" fz="36px" fw="900" td="underline">Trusted by world renowned carriers for over 10 years</Text>
                 <SimpleGrid spacing="lg" ta="center" cols={6}>
-                    {carrierDetailsList.map((details,index)=>(
-                        <SponsorsCard details={details}/>
+                    {carrierDetailsList.map((details, index)=>(
+                        <SponsorsCard details={details} key={index}/>
                     ))}
                 </SimpleGrid>
             </Paper>
