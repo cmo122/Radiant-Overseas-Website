@@ -13,7 +13,7 @@ import {
   import classes from '../css/FeaturesCards.module.css';
   
   
-  const mockdata = [
+  const data = [
     {
       title: 'Global Reach, Local Expertise',
       description:
@@ -36,7 +36,7 @@ import {
   
   export default function MainFeaturesCard() {
     const theme = useMantineTheme();
-    const features = mockdata.map((feature) => (
+    const features = data.map((feature) => (
       <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
         <feature.icon
           style={{ width: rem(50), height: rem(50) }}

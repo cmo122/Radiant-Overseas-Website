@@ -7,8 +7,9 @@ import cx from 'clsx';
 import classes from '../css/HeaderSimple.module.css';
 
 const links = [
-  { link: '/about', label: 'About Us' },
   { link: '/carriers', label: 'Our Carriers' },
+  { link: '/about', label: 'About Us' },
+  { link: '/contact', label: 'Contact Us' },
 ];
 
 export default function Header() {
@@ -37,14 +38,8 @@ export default function Header() {
       <Container size="md" className={classes.inner}>
         <Group>
           <IconPackage size={40} />
-          <h3 style={{
-                    color: 'linear-gradient(to right, yellow, blue, orange)',
-                    fontFamily: 'Futura, sans-serif',
-                    fontSize: '2rem',
-                    fontWeight: 'bold',
-                  }}>Radiant Overseas Express</h3>
         </Group>
-        <Group gap={5} visibleFrom="xs">
+        <Group gap={5} visibleFrom="sm">
           {items}
           <Button onClick={() => toggleColorScheme()}>
           <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
@@ -52,7 +47,7 @@ export default function Header() {
           </Button>
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="lg" />
       </Container>
     </header>
   );
