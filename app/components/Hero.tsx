@@ -2,26 +2,26 @@ import { Container, Title, Text } from '@mantine/core';
 import classes from '../css/HeroImageRight.module.css';
 
 export function HeroImageRight() {
+
   return (
     <div className={classes.root}>
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              The{' '}
-              <Text
+              Welcome to
+            <Text
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'pink', to: 'yellow' }}
+                gradient={{from:"yellow",to:"blue"}}
               >
-                preferred choice
-              </Text>{' '}
-              for freight forwarding
+              {' '}  R.O.E. LINE{' '}
+              </Text>
             </Title>
 
             <Text className={classes.description} mt={30}>
-              Lorem ipsum
+              The preferred freight forwarder for over 10 years
             </Text>
           </div>
         </div>

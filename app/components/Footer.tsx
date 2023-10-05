@@ -1,5 +1,5 @@
-import { Text, Container, Group } from '@mantine/core';
-import {IconPackage} from '@tabler/icons-react'
+import { Text, Container, Group, Image } from '@mantine/core';
+import ROELogo from '../assets/logos/ROELINELOGO.png'
 import classes from '../css/FooterLinks.module.css';
 
 const data = [
@@ -50,13 +50,7 @@ export default function Footer() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
         <Group>
-          <IconPackage size={40} />
-          <h3 style={{
-                    color: 'linear-gradient(to right, yellow, blue, orange)',
-                    fontFamily: 'Futura, sans-serif',
-                    fontSize: '2rem',
-                    fontWeight: 'bold',
-                  }}>Radiant Overseas Express</h3>
+          <Image src={ROELogo.src} alt="ROE LINE logo" />
         </Group>
         </div>
         <div className={classes.groups}>{groups}</div>

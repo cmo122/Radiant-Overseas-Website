@@ -1,17 +1,30 @@
 import React from 'react'
 import { SponsorsCard } from './SponsorsCard'
-import { Text, SimpleGrid, Paper } from '@mantine/core'
+import { Text, SimpleGrid, Image, Center } from '@mantine/core'
 import { carrierDetailsList } from './Carriers List/carrierDetailsList'
+import { Carousel } from '@mantine/carousel';
+import '../css/SponsorsCarousel.module.css'
 
 export default function SponsorsSection(){
+
+    const mobileSlides=carrierDetailsList.map((details)=>(
+        <Carousel.Slide  key={details.name} style={{justifyContent:"center", alignItems:"center"}}>
+            <Image src={details.logo.src} alt={details.name} w="350" h="220"/>
+        </Carousel.Slide>
+    ))
+
+
     return(
-            <Paper mb="lg">
-                <Text p="xl" ta="center" fz="36px" fw="900" td="underline">Trusted by world renowned carriers for over 10 years</Text>
-                <SimpleGrid spacing="lg" ta="center" cols={6}>
+            <Center mb="lg" styles={{root:{display:"flex", flexDirection:"column"}}}>
+                <Text p="xl" ta="center" fz="36px" fw="900">Trusted by the largest international carriers</Text>
+                <SimpleGrid spacing="lg" ta="center" cols={6} visibleFrom='lg'>
                     {carrierDetailsList.map((details, index)=>(
                         <SponsorsCard details={details} key={index}/>
                     ))}
                 </SimpleGrid>
-            </Paper>
+                <Carousel withIndicators hiddenFrom='lg' w="500" h="250" ta="center" display={"flex"}>
+                    {mobileSlides}               
+                </Carousel>
+            </Center>
     )
 }

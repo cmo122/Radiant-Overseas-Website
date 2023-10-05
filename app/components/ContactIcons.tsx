@@ -28,7 +28,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 const MOCKDATA = [
   { title: 'Email', description: 'import@roeline.net', icon: IconAt },
   { title: 'Phone', description: '909-468-1969', icon: IconPhone },
-  { title: 'Address', description: '2705 S. Diamond Bar Blvd. #200 Diamond Bar CA 91765', icon: IconMapPin },
+  { title: 'Address', description: '2705 S. Diamond Bar Blvd. #200, Diamond Bar, CA, 91765', icon: IconMapPin },
   { title: 'Working hours', description: '8 a.m. – 5 p.m.', icon: IconSun },
 ];
 
