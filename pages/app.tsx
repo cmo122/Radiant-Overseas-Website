@@ -1,4 +1,5 @@
 import React from "react";
+import { MantineProvider} from '@mantine/core';
 import Header from "@/app/components/Header";
 import { HeroImageRight } from "@/app/components/Hero";
 import MainFeaturesCard from "@/app/components/MainFeaturesCard";
@@ -11,7 +12,7 @@ import '@mantine/core/styles.css';
 export default function App() {
 
     return (
-            <>
+            <MantineProvider>
                 <Header/>
                 <HeroImageRight/>
                 <MainFeaturesCard/>
@@ -19,7 +20,7 @@ export default function App() {
                 <DetailedCardsSection/>
                 <GetInTouch/>
                 <Footer/>
-            </>
+            </MantineProvider>
     )
 }
 

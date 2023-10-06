@@ -36,8 +36,8 @@ type FeatureData = {
 const cargoTrackingFeatures:FeaturesCardData={mainTitle:'CARGO TRACKING', mainDescription:cargoTrackingDescription, featuresArray:cargoTrackingIconFeatures, reversed:false, bgimage:cargoTrackingImage}
 const cargoInsuranceFeatures:FeaturesCardData={mainTitle:'CARGO INSURANCE', mainDescription:cargoInsuranceDescription,featuresArray:cargoInsuranceIconFeatures, reversed:false, bgimage:cargoInsuranceImage}
 const customsClearanceFeatures:FeaturesCardData={mainTitle:'CUSTOMS CLEARANCE', mainDescription:customsDescription,featuresArray:customsIconFeatures, reversed:false, bgimage:customsImage}
-const transportRoutingFeatures:FeaturesCardData={mainTitle:'TRANSPORTATION ROUTING', mainDescription:transportRoutingDescription,featuresArray:transportRoutingIconFeatures, reversed:false, bgimage:transportRoutingImage}
-const consDeconsFeatures:FeaturesCardData={mainTitle:'CONSOLIDATION AND DECONSOLIDATION', mainDescription:consolidationDescription,featuresArray:consolidationIconFeatures, reversed:false, bgimage:consolidationImage}
+const transportRoutingFeatures:FeaturesCardData={mainTitle:'TRANSPORT ROUTING', mainDescription:transportRoutingDescription,featuresArray:transportRoutingIconFeatures, reversed:false, bgimage:transportRoutingImage}
+const consDeconsFeatures:FeaturesCardData={mainTitle:'CONSOL/DECONSOL', mainDescription:consolidationDescription,featuresArray:consolidationIconFeatures, reversed:false, bgimage:consolidationImage}
 
 const allFeatures=[cargoTrackingFeatures, cargoInsuranceFeatures, customsClearanceFeatures, transportRoutingFeatures, consDeconsFeatures]
 
