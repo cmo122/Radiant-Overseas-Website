@@ -1,11 +1,19 @@
 .indicators{
     color:grey
 }
-
-
 .slide{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(102, 204, 255, 1);
+    background: linear-gradient(to right, rgba(102, 204, 255, 1), rgba(102, 204, 255, 0.7));
+    border-radius: 1rem;
+    
 }
+
+@media (max-width: 400px) {
+    .root {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  

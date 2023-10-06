@@ -10,7 +10,7 @@ import {
     MantineProvider
   } from '@mantine/core';
   import {  IconWorld, IconCurrentLocation, IconBulb } from '@tabler/icons-react';
-  import classes from '../css/FeaturesCards.module.css';
+  import classes from '../css/MainFeaturesCard.module.css';
   
   
   const data = [

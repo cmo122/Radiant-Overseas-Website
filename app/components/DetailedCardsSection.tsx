@@ -1,4 +1,5 @@
 import React from "react";
+import { Text, Group } from "@mantine/core";
 import { FeaturesCardTemplate } from "./FeaturesCardTemplate";
 import { cargoTrackingIconFeatures, cargoTrackingDescription } from "./ROE_Services/Cargo_Tracking";
 import cargoTrackingImage from '../assets/images/cargo-tracking.jpg'
@@ -42,7 +43,8 @@ const allFeatures=[cargoTrackingFeatures, cargoInsuranceFeatures, customsClearan
 
 export default function DetailedCardsSection(){
     return(
-        <>
+        <Group id="expertiseSection" >
+            <Text p="xl" fz="36px" fw="900">Our Expertise</Text>
             {allFeatures.map((features,index)=>(
                 <div key={index}>
                     <FeaturesCardTemplate features={{
@@ -51,6 +53,6 @@ export default function DetailedCardsSection(){
                     }}/>
                 </div>
             ))}
-        </>
+        </Group>
     )
 }

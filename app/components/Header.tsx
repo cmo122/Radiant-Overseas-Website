@@ -1,34 +1,32 @@
-import { useState } from 'react';
-import { Container, useMantineColorScheme, Button, Group, Burger, Image, Center } from '@mantine/core';
+import { Container, useMantineColorScheme, Button, Group, Burger, Image, Center, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import ROELOGO from '../assets/logos/ROELINELOGO.png'
 import { IconSun, IconMoon } from '@tabler/icons-react';
+import { Link } from 'react-scroll';
 import cx from 'clsx';
 import classes from '../css/HeaderSimple.module.css';
 
 const links = [
-  { link: '/carriers', label: 'Our Carriers' },
-  { link: '/about', label: 'Our Expertise' },
-  { link: '/contact', label: 'Contact Us' },
+  { link: 'carriersSection', label: 'Our Carriers' },
+  { link: 'expertiseSection', label: 'Our Expertise' },
+  { link: 'contactForm', label: 'Contact Us' },
 ];
 
 export default function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [opened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
-  const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
-    >
-      {link.label}
-    </a>
+  const items = links.map((link, index) => (
+    <Button key={index} m="sm" onClick={closeDrawer}>
+      <Link
+          activeClass="active"
+          to={link.link}
+          spy={true}
+          smooth={true}
+          offset={-30}
+        >
+          {link.label}
+        </Link>
+    </Button>
   ));
     
   const { toggleColorScheme } = useMantineColorScheme();
@@ -47,7 +45,10 @@ export default function Header() {
           </Button>
         </Center>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="lg" />
+        <Burger opened={opened} onClick={toggleDrawer} hiddenFrom="sm" size="lg" />
+        <Drawer opened={opened} onClose={closeDrawer }>
+          {items}
+        </Drawer>
       </Container>
     </header>
   );

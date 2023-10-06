@@ -4,7 +4,7 @@ import classes from '../css/GetInTouch.module.css';
 
 export function GetInTouch() {
   return (
-    <Paper shadow="md" radius="lg">
+    <Paper shadow="md" radius="lg" id="contactForm">
       <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ background: 'linear-gradient(to bottom, #FF8C00, #002855)' }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">

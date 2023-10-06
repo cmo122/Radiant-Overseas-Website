@@ -1,5 +1,5 @@
 import { Text, ThemeIcon,  rem } from '@mantine/core';
-import classes from '../css/FeaturesTitle.module.css';
+import classes from '../css/FeaturesCard.module.css';
 import { TablerIconsProps } from '@tabler/icons-react';
 import { StaticImageData } from 'next/image';
 import FeaturesCard from './FeaturesCard';

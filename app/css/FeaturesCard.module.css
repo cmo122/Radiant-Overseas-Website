@@ -1,5 +1,5 @@
 .wrapper {
-    padding: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-xl);
+    padding: 1rem;
   }
   
   .title {
@@ -14,4 +14,19 @@
   .description{
     color: #333333;
     font-weight: 600;
+    
   }
+
+
+  @media (max-width: 520px) {
+    .featuresCard {
+      width: 40%;
+    }
+    .title{
+      font-size: rem(12px);
+    }
+    .featuresCardOverlay {
+      overflow:scroll
+    }
+  }
+  

@@ -11,7 +11,7 @@ type prop={
     link: string
 }
 
-export function SponsorsCard({details}:{details:prop}) {
+export function CarrierCard({details}:{details:prop}) {
 
   const [hoverState,setHoverState]=useState(false)
 
