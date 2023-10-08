@@ -19,15 +19,16 @@ export default function CarriersSection(){
     return(
             <Group m="sm" styles={{root:{display:"flex", flexDirection:"column"}}} id="carriersSection">
                 <Text  ta="center" fz="36px" fw="900">Trusted by the largest international carriers</Text>
-                <SimpleGrid spacing="lg" ta="center" cols={6} visibleFrom='lg'>
+                <SimpleGrid spacing="lg" ta="center" cols={6} visibleFrom='md'>
                     {carrierDetailsList.map((details, index)=>(
                         <CarrierCard  details={details} key={index}/>
                     ))}
                 </SimpleGrid>
-                <Carousel withIndicators hiddenFrom='lg'
+                <Carousel hiddenFrom='md'
                 loop
                 classNames={classes}
                 plugins={[autoplay.current]}
+                slideSize={{ base:"100%", sm: '50%', md:"33.333333%" }}
                 >
                     {mobileSlides}               
                 </Carousel>

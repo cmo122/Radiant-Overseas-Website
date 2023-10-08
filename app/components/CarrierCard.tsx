@@ -17,14 +17,14 @@ export function CarrierCard({details}:{details:prop}) {
 
   return (
     
-    <Link href={details.link} className={classes.card} onMouseOver={()=>setHoverState(true)} onMouseOut={()=>setHoverState(false)}>
+    <Link style={{minWidth:"150px"}} href={details.link} className={classes.card} onMouseOver={()=>setHoverState(true)} onMouseOut={()=>setHoverState(false)}>
         <Image
             src={details.logo.src}
             alt={details.name}
             h="140px"
             w="140px"
             className={classes.logo}/>
-        {hoverState && <IconExternalLink className={classes.redirectIcon} >Redirecting to tracker link</IconExternalLink>}
+        {hoverState && <IconExternalLink className={classes.redirectIcon} />}
     </Link>
     
   );

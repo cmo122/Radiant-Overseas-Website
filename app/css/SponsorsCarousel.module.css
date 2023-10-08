@@ -5,15 +5,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, rgba(102, 204, 255, 1), rgba(102, 204, 255, 0.7));
-    border-radius: 1rem;
+    background: rgba(102, 204, 255, 1);
+    margin:0;
+    padding:0;
     
 }
+
 
 @media (max-width: 400px) {
     .root {
       width: 90%;
-      margin: 0 auto;
     }
   }
-  
+ 
+  @media (max-width:$mantine-breakpoint-sm) {
+    .slide {
+      border-radius: 1rem;
+    }
+  }
+    
