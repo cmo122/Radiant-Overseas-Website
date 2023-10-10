@@ -41,6 +41,7 @@ const schema = z.object({
 export default function GetInTouch() {
 
   const [success, setSuccess]=useState(false)
+  const [failure, setFailure]=useState(false)
 
   const {
     register,
@@ -79,8 +80,14 @@ export default function GetInTouch() {
         },
       })
       .then((response) => {
-        console.log(response.data);
-        setSuccess(true)
+        if(response.status===200){
+          console.log("Sent!");
+          setSuccess(true)
+        }
+        else{
+          console.log("Failed to send!");
+          setFailure(true)
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -92,7 +99,6 @@ export default function GetInTouch() {
     } else {
         console.error(validation.error);
       }
-      setSuccess(true)
   }
 
   return (
@@ -114,23 +120,23 @@ export default function GetInTouch() {
 
           <div className={classes.fields}>
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
-              <div>
+              <div className={classes.inputContainer}>
                 <TextInput  id="name" label="Your name" placeholder="Your name" {...register("name")}
                  />
                 {errors.name && <span className={classes.errorMessage} role="alert">{errors.name?.message}</span>}
               </div>
-              <div>
+              <div className={classes.inputContainer}>
                 <TextInput  label="Your email" placeholder="johndoe@gmail.com" type='email'  {...register("email")} required />
                 {errors?.email && <span className={classes.errorMessage} role="alert">{errors.email?.message}</span>}
               </div>
             </SimpleGrid>
 
-            <div>
+            <div className={classes.inputContainer}>
               <TextInput  mt="md" label="Subject" placeholder="Subject" {...register("subject")} required />
               {errors.subject && <span className={classes.errorMessage} role="alert">{errors.subject?.message}</span>}
             </div>
 
-            <div>
+            <div className={classes.inputContainer}>
               <Textarea
                 mt="md"
                 label="Your message"
@@ -147,7 +153,8 @@ export default function GetInTouch() {
                 Send message
               </Button>
             </Group>
-            {success && <Text>Message Sent!</Text>}
+            {success && <Text c="green">Message Sent!</Text>}
+            {failure && <Text c="red">Form could not be sent</Text>}
           </div>
         </form>
       </div>

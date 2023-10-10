@@ -5,12 +5,15 @@ import { carrierDetailsList } from './Carriers List/carrierDetailsList'
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import classes from '../css/SponsorsCarousel.module.css'
+import Link from 'next/link';
 
 export default function CarriersSection(){
 
     const mobileSlides=carrierDetailsList.map((details)=>(
         <Carousel.Slide  key={details.name} >
-            <Image src={details.logo.src} alt={details.name} ml="md" mr="md" maw="80%" mah="80%"/>
+            <Link href={details.link} style={{display: 'flex',justifyContent:"center", alignItems:"center"}}>
+                <Image src={details.logo.src} alt={details.name} ml="md" mr="md" maw="80%" mah="80%"/>
+            </Link>
         </Carousel.Slide>
     ))
 
@@ -19,6 +22,9 @@ export default function CarriersSection(){
     return(
             <Group m="sm" styles={{root:{display:"flex", flexDirection:"column"}}} id="carriersSection">
                 <Text  ta="center" fz="36px" fw="900">Trusted by the largest international carriers</Text>
+                <Text c="dimmed" ta="center" mt="md" className={classes.description}>
+                    Carrier tracking links
+                </Text> 
                 <SimpleGrid spacing="lg" ta="center" cols={6} visibleFrom='md'>
                     {carrierDetailsList.map((details, index)=>(
                         <CarrierCard  details={details} key={index}/>

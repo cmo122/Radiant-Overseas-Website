@@ -25,7 +25,7 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'purple' }}
+        gradient={{ deg: 133, from: 'orange', to: 'yellow' }}
       >
         <feature.icon style={{ width: rem(26), height: rem(26) }} stroke={1.5} />
       </ThemeIcon>
@@ -40,7 +40,7 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
 
   return (
     <div className={classes.wrapper} >
-      <FeaturesCard features={features} items={items}/>
+        <FeaturesCard features={features} items={items}/>
     </div>
   );
 }

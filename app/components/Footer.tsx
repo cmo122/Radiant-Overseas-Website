@@ -1,49 +1,40 @@
-import { Text, Container, Group, Image } from '@mantine/core';
+import {  Container, Group, Image } from '@mantine/core';
 import ROELogo from '../assets/logos/ROELINELOGO.png'
 import classes from '../css/FooterLinks.module.css';
 
-const data = [
-  {
-    title: 'About',
-    links: [
-      { label: 'Features', link: '#' },
-      { label: 'Pricing', link: '#' },
-      { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' },
-    ],
-  },
-  {
-    title: 'Our Services',
-    links: [
-      { label: 'Contribute', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
-    ],
-  }
-];
+// const data = [
+//   {
+//     title: 'About',
+//     links: [
+//       { label: 'Features', link: '#' },
+//       { label: 'Pricing', link: '#' },
+//       { label: 'Support', link: '#' },
+//       { label: 'Forums', link: '#' },
+//     ],
+//   }
+// ];
 
 export default function Footer() {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text<'a'>
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
-        {link.label}
-      </Text>
-    ));
+  // const groups = data.map((group) => {
+  //   const links = group.links.map((link, index) => (
+  //     <Text<'a'>
+  //       key={index}
+  //       className={classes.link}
+  //       component="a"
+  //       href={link.link}
+  //       onClick={(event) => event.preventDefault()}
+  //     >
+  //       {link.label}
+  //     </Text>
+  //   ));
 
-    return (
-      <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
-        {links}
-      </div>
-    );
-  });
+  //   return (
+  //     <div className={classes.wrapper} key={group.title}>
+  //       <Text className={classes.title}>{group.title}</Text>
+  //       {links}
+  //     </div>
+  //   );
+  // });
 
   return (
     <footer className={classes.footer}>
@@ -53,7 +44,7 @@ export default function Footer() {
           <Image src={ROELogo.src} alt="ROE LINE logo" />
         </Group>
         </div>
-        <div className={classes.groups}>{groups}</div>
+        {/* <div className={classes.groups}>{groups}</div> */}
       </Container>
       <Container className={classes.afterFooter}>
       </Container>

@@ -1,31 +1,29 @@
-import {IconTimeline, IconAccessible, IconHistory, IconAlertCircle } from '@tabler/icons-react';
+import {IconArrowMergeBoth, IconBuildingWarehouse, IconForklift, IconCertificate} from '@tabler/icons-react';
 
-export const consolidationDescription=`Our advanced tracking system puts you in control. 
-Monitor your cargo in real-time, 24/7. With us, you'll never lose sight of your shipments, no matter where they are in the world.`
+export const consolidationDescription=`Whether you're looking to combine shipments into a single container or break down consolidated cargo, we offer a seamless solution tailored to your specific needs. 
+Trust us to optimize your supply chain, reduce costs, and ensure your goods reach their destination in the most efficient manner possible.`
 
 export const consolidationIconFeatures = [
   {
-    icon: IconTimeline,
-    title: 'Real-Time Tracking',
-    description: `Keep tabs on your shipments in real-time, from origin to destination. 
-    Our cargo tracking feature provides instant updates on the current location and status of your goods, ensuring you're always in the know`,
+    icon: IconArrowMergeBoth,
+    title: 'Cargo Consolidation',
+    description: `We consolidate your shipments from various sources into a single container, reducing shipping costs and minimizing transit times. 
+    This service optimizes container space and enhances cargo utilization.`,
   },
   {
-    icon: IconAccessible,
-    title: 'Effortless Accessibility',
-    description: `Access your shipment information anytime, anywhere, with our user-friendly cargo tracking platform. 
-    Whether you're on a computer or mobile device, our service is designed for seamless accessibility and convenience`,
+    icon: IconBuildingWarehouse,
+    title: 'Deconsolidation Expertise',
+    description: `When your cargo arrives at its destination, our deconsolidation service efficiently breaks down consolidated shipments, ensuring quick distribution and smooth cargo handling at the destination.`,
   },
   {
-    icon: IconHistory,
-    title: 'Detailed Shipment History',
-    description: `Dive deep into your shipment's journey with a comprehensive history log. 
-    Our cargo tracking feature provides detailed records of every checkpoint and event, empowering you with valuable insights into your cargo's progress`,
+    icon: IconForklift,
+    title: 'Inventory Management',
+    description: `We offer inventory management solutions during the consolidation and deconsolidation processes. 
+    Track and manage your inventory accurately to prevent shortages or overstocking.`,
   },
   {
-    icon: IconAlertCircle,
-    title: 'Alerts and Notifications',
-    description: `Stay informed with automatic alerts and notifications. 
-    Receive timely updates on any changes or delays affecting your cargo, allowing you to take proactive measures and ensure a smooth logistics process.`,
+    icon: IconCertificate,
+    title: 'Customs Compliance',
+    description: `Our team ensures that all customs and regulatory requirements are met during the consolidation and deconsolidation processes, helping you avoid delays and fines.`,
   },
 ];

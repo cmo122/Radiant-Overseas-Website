@@ -41,7 +41,7 @@ import {
         <feature.icon
           style={{ width: rem(50), height: rem(50) }}
           stroke={2}
-          color={theme.colors.blue[6]}
+          color={theme.colors.orange[9]}
         />
         <Text  fz="lg" fw={500} className={classes.cardTitle} mt="md">
           {feature.title}
@@ -61,7 +61,7 @@ import {
               Let us take care of your inventory
             </Title>
             <Text c="dimmed" className={classes.description} ta="center" mt="md">
-              Lorem ipsum
+              Trusted experience
             </Text>
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
               {features}

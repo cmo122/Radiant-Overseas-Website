@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, Group } from "@mantine/core";
+import { Flex,  Text} from "@mantine/core";
 import { FeaturesCardTemplate } from "./FeaturesCardTemplate";
 import { cargoTrackingIconFeatures, cargoTrackingDescription } from "./ROE_Services/Cargo_Tracking";
-import cargoTrackingImage from '../assets/images/cargo-tracking.jpg'
+import cargoTrackingImage from '../assets/images/cargo-tracking.avif'
 // ***
 import { cargoInsuranceIconFeatures, cargoInsuranceDescription } from "./ROE_Services/Cargo_Insurance";
 import cargoInsuranceImage from '../assets/images/cargo-insurance.jpg'
@@ -18,6 +18,7 @@ import consolidationImage from '../assets/images/consolidation.avif'
 // ***
 import { TablerIconsProps } from '@tabler/icons-react';
 import { StaticImageData } from "next/image";
+
 
 type FeatureData = {
     icon: (props: TablerIconsProps) => JSX.Element;
@@ -43,16 +44,17 @@ const allFeatures=[cargoTrackingFeatures, cargoInsuranceFeatures, customsClearan
 
 export default function DetailedCardsSection(){
     return(
-        <Group id="expertiseSection" >
+            
+        <Flex id="expertiseSection" justify="center" align="center" direction="column" ta="center">
             <Text p="xl" fz="36px" fw="900">Our Expertise</Text>
             {allFeatures.map((features,index)=>(
                 <div key={index}>
-                    <FeaturesCardTemplate features={{
-                    ...features,
-                    reversed: index % 2 === 0,
-                    }}/>
+                        <FeaturesCardTemplate features={{
+                        ...features,
+                        reversed: index % 2 === 0,
+                        }}/>
                 </div>
             ))}
-        </Group>
+        </Flex>
     )
 }

@@ -22,7 +22,7 @@ export default function FeaturesCard({features, items}:{features:FeaturesCardDat
     
     return(
         <Grid gutter={80} className="featuresCard" miw="0">
-          <Grid.Col span={{ base: 12, sm:12, md: 12,  xl:6 }}>
+          <Grid.Col span={{ base: 12, sm:12, md: 6, lg:6, xl:6 }}>
             <BackgroundImage p="sm" src={features.bgimage.src} radius="lg" mah="500rem" mih="0" h="25rem">
               <Paper p="md" m="md" style={{ background: 'rgba(255, 255, 255, 0.65)',
                 boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
@@ -43,7 +43,7 @@ export default function FeaturesCard({features, items}:{features:FeaturesCardDat
           </Grid.Col>
         
 
-        <Grid.Col span={{ base: 12, sm:12, md: 12,  xl:6 }} >
+        <Grid.Col span={{ base: 12, sm:12, md: 6, lg:6, xl:6 }} >
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
             {items}
           </SimpleGrid>

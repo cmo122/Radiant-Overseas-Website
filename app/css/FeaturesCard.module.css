@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .title {
@@ -23,10 +23,15 @@
       width: 40%;
     }
     .title{
-      font-size: rem(12px);
-    }
-    .featuresCardOverlay {
-      overflow:scroll
+      font-size: rem(20px);
     }
   }
   
+  @media (max-width: 320px) {
+    .featuresCard {
+      width: 40%;
+    }
+    .title{
+      font-size: rem(14px);
+    }
+  }

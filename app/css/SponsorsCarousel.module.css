@@ -1,6 +1,23 @@
+.description {
+    max-width: rem(600px);
+    margin: auto;
+  
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--mantine-color-blue-filled);
+      width: rem(45px);
+      height: rem(2px);
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
 .indicators{
     color:grey
 }
+
 .slide{
     display: flex;
     justify-content: center;

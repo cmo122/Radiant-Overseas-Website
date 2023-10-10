@@ -8,11 +8,10 @@ import '../app/css/global.css'
 export default function Index(){
 
     return(
-            <MantineProvider>
+            <MantineProvider defaultColorScheme="auto">
                 <Head>
                 <title>ROE LINE</title>
                 <meta name="description" content="ROE LINE Freight Forwarding" />
-                <meta name="viewport" content="width=device-width"/>
                 </Head>
                 <App/>
             </MantineProvider>
