@@ -2,12 +2,15 @@ import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid } from '@ma
 import { ContactIconsList } from './ContactIcons';
 import classes from '../css/GetInTouch.module.css';
 // import {
-//   useForm as useFormspree,
+//   useForm as useFormFormspree ,
 //   ValidationError as ServerError
 // } from "@formspree/react";
+// import { toast } from 'react-toastify';
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, SubmitHandler} from "react-hook-form"
+import { useForm as useFormReactHookForm, SubmitHandler} from "react-hook-form"
 import {z} from 'zod'
+import axios from 'axios';
 
 interface FormFields {
   name: string
@@ -37,12 +40,13 @@ const schema = z.object({
 
 export default function GetInTouch() {
 
+  const [success, setSuccess]=useState(false)
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormFields>({
+  } = useFormReactHookForm<FormFields>({
     resolver: zodResolver(schema),
     mode: 'onTouched',
     reValidateMode:'onChange' 
@@ -58,20 +62,29 @@ export default function GetInTouch() {
       formData.append('email', data.email);
       formData.append('subject', data.subject);
       formData.append('message', data.message);
-      try{
-        await fetch('https://formspree.io/f/xeqbpdrj', {
-          method: 'POST',
-          body: formData,
-        })
-        .then((response) => {
-        if(response.ok){
-          console.log("Sent!")
-        }
-        console.log(response)
+      try {
+      //   await fetch('https://formspree.io/f/xeqbpdrj', {
+      //     method: 'POST',
+      //     body: formData,
+      //   })
+      //   .then((response) => {
+      //   console.log(response)
+      // })
+      //   .catch((error) => {
+      //     console.log(error)
+      //   });
+      axios.post('https://formspree.io/f/xeqbpdrj', data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
-        .catch((error) => {
-          console.log(error)
-        });
+      .then((response) => {
+        console.log(response.data);
+        setSuccess(true)
+      })
+      .catch((error) => {
+        console.error(error);
+      });
       } catch(error) {
       console.error(error)
     } 
@@ -79,6 +92,7 @@ export default function GetInTouch() {
     } else {
         console.error(validation.error);
       }
+      setSuccess(true)
   }
 
   return (
@@ -133,6 +147,7 @@ export default function GetInTouch() {
                 Send message
               </Button>
             </Group>
+            {success && <Text>Message Sent!</Text>}
           </div>
         </form>
       </div>
