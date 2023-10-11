@@ -13,7 +13,6 @@ export default function Index(){
                 <title>ROE LINE</title>
                 <meta name="description" content="ROE LINE Freight Forwarding" />
                 <meta name="next-head-count" content="fill"/>
-                <link rel="icon" href="/favicon.ico" />
                 <html lang="en" />
                 </Head>
                 <App/>
