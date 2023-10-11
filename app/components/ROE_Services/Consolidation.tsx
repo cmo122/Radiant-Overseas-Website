@@ -1,7 +1,6 @@
 import {IconArrowMergeBoth, IconBuildingWarehouse, IconForklift, IconCertificate} from '@tabler/icons-react';
 
-export const consolidationDescription=`Whether you're looking to combine shipments into a single container or break down consolidated cargo, we offer a seamless solution tailored to your specific needs. 
-Trust us to optimize your supply chain, reduce costs, and ensure your goods reach their destination in the most efficient manner possible.`
+export const consolidationDescription=`Trust us to optimize your supply chain, reduce costs, and ensure your goods reach their destination in the most efficient manner possible.`
 
 export const consolidationIconFeatures = [
   {

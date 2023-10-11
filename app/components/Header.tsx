@@ -40,7 +40,11 @@ export default function Header() {
   ));
   
   const changeThemeButton= 
-  <Button id="changeThemeButton" name="changeThemeButton" key="4" onClick={() => toggleColorScheme()} 
+  <Button id="changeThemeButton" name="changeThemeButton" key="4" 
+    onClick={() => {
+    closeDrawer();
+    toggleColorScheme()}
+    }
     className={classes.link}
     m="sm"
     variant="gradient"
