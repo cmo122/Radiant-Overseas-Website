@@ -1,11 +1,6 @@
 import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid } from '@mantine/core';
 import { ContactIconsList } from './ContactIcons';
 import classes from '../css/GetInTouch.module.css';
-// import {
-//   useForm as useFormFormspree ,
-//   ValidationError as ServerError
-// } from "@formspree/react";
-// import { toast } from 'react-toastify';
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm as useFormReactHookForm, SubmitHandler} from "react-hook-form"
@@ -64,16 +59,6 @@ export default function GetInTouch() {
       formData.append('subject', data.subject);
       formData.append('message', data.message);
       try {
-      //   await fetch('https://formspree.io/f/xeqbpdrj', {
-      //     method: 'POST',
-      //     body: formData,
-      //   })
-      //   .then((response) => {
-      //   console.log(response)
-      // })
-      //   .catch((error) => {
-      //     console.log(error)
-      //   });
       axios.post('https://formspree.io/f/xeqbpdrj', data, {
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +66,6 @@ export default function GetInTouch() {
       })
       .then((response) => {
         if(response.status===200){
-          console.log("Sent!");
           setSuccess(true)
         }
         else{

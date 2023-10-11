@@ -1,6 +1,5 @@
 .header {
     height: rem(56px);
-    border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
     position:sticky;
     top: 0;
     left: 0;
@@ -27,17 +26,18 @@
     padding: rem(8px) rem(12px);
     border-radius: var(--mantine-radius-sm);
     text-decoration: none;
-    color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
+    color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-white));
     font-size: var(--mantine-font-size-sm);
-    font-weight: 500;
-    background-color: linear-gradient(250deg, rgba(201, 244, 139, 0) 0%, #062343 100%);
-    [data-mantine-color-scheme] &[data-active] {
-      background-color: linear-gradient(250deg, rgba(201, 244, 139, 0) 0%, #062343 70%)
+    font-weight: 100;
+  
+    @mixin hover {
+      background-color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-6));
     }
-  }
-
-  .link:hover{
-    background-color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-6));
+  
+    [data-mantine-color-scheme] &[data-active] {
+      background-color: var(--mantine-color-blue-filled);
+      color: var(--mantine-color-white);
+    }
   }
 
   .icon {
@@ -48,7 +48,7 @@
   @media (max-width: $mantine-breakpoint-sm)  {
     .link{
         width: rem(200px);
-        height:rem(100px)
+        height: rem(100px)
     }
 }
   
