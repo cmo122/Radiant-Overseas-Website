@@ -12,8 +12,8 @@ export default function Index(){
                 <Head>
                 <title>ROE LINE</title>
                 <meta name="description" content="ROE LINE Freight Forwarding" />
+                <meta name="next-head-count" content="fill"/>
                 <link rel="icon" href="/icon.ico" />
-                <link rel="apple-touch-icon" sizes="16x16" href="/icon.ico" />
                 <html lang="en" />
                 </Head>
                 <App/>
