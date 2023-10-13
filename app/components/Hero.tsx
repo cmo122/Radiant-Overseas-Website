@@ -21,7 +21,7 @@ export function Hero() {
                     variant="gradient"
                     gradient={{from:"orange",to:"yellow"}}
                   >
-                  {' '}  R.O.E LINE{' '}
+                  {' '}  R.O.E. LINE{' '}
                   </Text>
                 </Title>
               </LazyLoad>
