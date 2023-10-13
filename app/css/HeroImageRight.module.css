@@ -68,9 +68,17 @@
     font-family: Greycliff CF, var(--mantine-font-family);
     font-size: rem(22px);
   
+    @media (max-width: $mantine-breakpoint-sm) {
+      font-size: rem(18px);
+    }
+
+    @media (max-width: $mantine-breakpoint-xs) {
+      font-size: rem(16px);
+    }
+
     @media (max-width: 425px) {
       width: 100%;
-      font-size: rem(18px);
+      font-size: rem(16px);
     }
   }
 
