@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import { CarrierCard } from './CarrierCard';
-import { Text, SimpleGrid, Image,  Group } from '@mantine/core'
+import { Text, SimpleGrid, Image,  Group} from '@mantine/core'
 import { carrierDetailsList } from './Carriers List/carrierDetailsList'
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
@@ -26,17 +26,18 @@ export default function CarriersSection(){
             <Text c="dimmed" ta="center" mt="md" className={classes.description}>
                 Carrier tracking links
             </Text> 
-            <SimpleGrid spacing="sm" ta="center" cols={6} visibleFrom='md'
-            mr="xl" role="carriergrid" id="carriergrid">
-                {carrierDetailsList.map((details, index)=>(
-                    <CarrierCard  details={details} key={index}/>
-                ))}
-            </SimpleGrid>
+                <SimpleGrid spacing="sm" ta="center" cols={5} visibleFrom='md'
+                 role="carriergrid" id="carriergrid">
+                    {carrierDetailsList.map((details, index)=>(
+                            <CarrierCard details={details} key={index} />
+                    ))}
+                
+                </SimpleGrid>
             <Carousel hiddenFrom='md'
             loop
             classNames={classes}
             plugins={[autoplay.current]}
-            slideSize={{ base:"100%", sm: '50%', md:"33.333333%" }}
+            slideSize={{ base:"100%", xs:'50%', sm: '33.333333%'}}
             role="carriercarousel"
             id="carriercarousel"
             >

@@ -28,14 +28,13 @@
     
 }
 
-
 @media (max-width: 400px) {
     .root {
-      width: 90%;
+      width: 98%;
     }
   }
  
-  @media (max-width:$mantine-breakpoint-sm) {
+  @media (max-width:576px) {
     .slide {
       border-radius: 1rem;
     }

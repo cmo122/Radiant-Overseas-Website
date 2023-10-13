@@ -17,7 +17,7 @@ export function CarrierCard({details}:{details:prop}) {
 
   return (
     
-    <Link style={{minWidth:"150px"}} href={details.link} className={classes.card} onMouseOver={()=>setHoverState(true)} onMouseOut={()=>setHoverState(false)}>
+    <Link style={{minWidth:"180px"}} href={details.link} className={classes.card} onMouseOver={()=>setHoverState(true)} onMouseOut={()=>setHoverState(false)}>
         <Image
             src={details.logo.src}
             alt={details.name}

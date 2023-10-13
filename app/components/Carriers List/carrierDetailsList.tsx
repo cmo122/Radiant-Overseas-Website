@@ -8,8 +8,9 @@ import oneLogo from '../../assets/logos/ONE.png'
 import hmmLogo from '../../assets/logos/hmm.png'
 import ooclLogo from '../../assets/logos/oocl.png'
 import coscoLogo from '../../assets/logos/cosco.png'
-import shipLinkLogo from '../../assets/logos/shipmentlink.png'
+import evergreenLogo from '../../assets/logos/evergreen.png'
 import smLineLogo from '../../assets/logos/smline.png'
+import wanhaiLogo from '../../assets/logos/wanhai.png'
 
 export const carrierDetailsList=[
     {name:"Maersk",logo:maerskLogo,link:"https://www.maersk.com.cn/tracking/#tracking/"},
@@ -22,6 +23,7 @@ export const carrierDetailsList=[
     {name:"HMM",logo:hmmLogo,link:"https://www.hmm21.com/company.do"},
     {name:"OOCL",logo:ooclLogo,link:"https://www.oocl.com/eng/Pages/default.aspx"},
     {name:"Cosco",logo:coscoLogo,link:"https://elines.coscoshipping.com/ebusiness/cargoTracking?trackingType=BOOKING&number"},
-    {name:"Shipment Link",logo:shipLinkLogo,link:"https://ct.shipmentlink.com/servlet/TDB1_CargoTracking.do"},
-    {name:"SM Line",logo:smLineLogo,link:"http://esvc.smlines.com/smline/CUP_HOM_3301.do"},
+    {name:"Evergreen",logo:evergreenLogo,link:"https://ct.shipmentlink.com/servlet/TDB1_CargoTracking.do"},
+    {name:"Wan Hai",logo:wanhaiLogo,link:"https://www.wanhai.com/views/Main.xhtml"},
+    {name:"SM LINE",logo:smLineLogo,link:"http://esvc.smlines.com/smline/CUP_HOM_3301.do"},
 ]
