@@ -53,8 +53,8 @@ import {
     ));
   
     return (
-      <MantineProvider>
-          <Container size="lg" py="xl">
+      <MantineProvider >
+          <Container size="lg" py="xl" role="mainFeatures">
             <Group justify="center">
             </Group>
             <Title order={2} className={classes.title} ta="center" mt="sm">

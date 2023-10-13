@@ -86,7 +86,7 @@ export default function GetInTouch() {
   }
 
   return (
-    <Paper shadow="md" radius="lg" id="contactForm">
+    <Paper shadow="md" radius="lg" id="contactForm" role="contact">
       <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ background: 'linear-gradient(to bottom, #FF8C00, #002855)' }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
@@ -107,17 +107,17 @@ export default function GetInTouch() {
               <div className={classes.inputContainer}>
                 <TextInput  id="name" label="Your name" placeholder="Your name" {...register("name")}
                  />
-                {errors.name && <span className={classes.errorMessage} role="alert">{errors.name?.message}</span>}
+                {errors.name && <span className={classes.errorMessage} role="alert" id="nameError">{errors.name?.message}</span>}
               </div>
               <div className={classes.inputContainer}>
-                <TextInput  label="Your email" placeholder="johndoe@gmail.com" type='email'  {...register("email")} required />
-                {errors?.email && <span className={classes.errorMessage} role="alert">{errors.email?.message}</span>}
+                <TextInput  label="Your email" id="email" placeholder="johndoe@gmail.com" type='email'  {...register("email")} required />
+                {errors?.email && <span className={classes.errorMessage} role="alert" id="emailError">{errors.email?.message}</span>}
               </div>
             </SimpleGrid>
 
             <div className={classes.inputContainer}>
-              <TextInput  mt="md" label="Subject" placeholder="Subject" {...register("subject")} required />
-              {errors.subject && <span className={classes.errorMessage} role="alert">{errors.subject?.message}</span>}
+              <TextInput  mt="md" label="Subject" id="subject" placeholder="Subject" {...register("subject")} required />
+              {errors.subject && <span className={classes.errorMessage} role="alert" id="subjectError">{errors.subject?.message}</span>}
             </div>
 
             <div className={classes.inputContainer}>
@@ -127,18 +127,19 @@ export default function GetInTouch() {
                 placeholder="Please include all relevant information"
                 minRows={3}
                 {...register("message")}
+                id="message"
                 required
               />
-              {errors.message && <span className={classes.errorMessage} role="alert">{errors.message?.message}</span>}
+              {errors.message && <span className={classes.errorMessage} role="alert" id="messageError">{errors.message?.message}</span>}
             </div>
 
             <Group justify="flex-end" mt="md">
-              <Button type="submit" className={classes.control}>
+              <Button type="submit" className={classes.control} role="sendMessage">
                 Send message
               </Button>
             </Group>
-            {success && <Text c="green">Message Sent!</Text>}
-            {failure && <Text c="red">Form could not be sent</Text>}
+            {success && <Text c="green" id="success">Message Sent!</Text>}
+            {failure && <Text c="red" id="failure">Form could not be sent</Text>}
           </div>
         </form>
       </div>

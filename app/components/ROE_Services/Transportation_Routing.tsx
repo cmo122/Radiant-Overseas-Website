@@ -1,7 +1,6 @@
 import {IconMapRoute, IconEye, IconAnchor, IconAlertTriangle } from '@tabler/icons-react';
 
-export const transportRoutingDescription=`We are your key to reducing costs, improving delivery times, and enhancing overall logistics performance. 
-We will help you navigate the complex web of routes and carriers, ensuring your goods move seamlessly from point A to B, and beyond.`
+export const transportRoutingDescription=`We will help you navigate the complex web of routes and carriers, ensuring your goods move seamlessly from point A to B, and beyond.`
 
 export const transportRoutingIconFeatures = [
   {

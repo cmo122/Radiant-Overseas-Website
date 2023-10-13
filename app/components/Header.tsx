@@ -1,4 +1,4 @@
-import { Text, Container, useMantineColorScheme, Button, Group, Burger, Image, Center, Drawer, Flex } from '@mantine/core';
+import { rem,Text, Container, useMantineColorScheme, Button, Group, Burger, Image, Center, Drawer, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import ROELOGO from '../assets/logos/ROELINELOGO.png'
 import { IconSun, IconMoon } from '@tabler/icons-react';
@@ -58,22 +58,25 @@ export default function Header() {
   const { toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <Group>
-          <Image src={ROELOGO.src} alt="ROE LINE logo" fit="contain" w="100" h="100"/>
-        </Group>
-        <Center  visibleFrom="sm">
-          {items}
-        </Center>
-
-        <Burger opened={opened} onClick={toggleDrawer} hiddenFrom="sm" size="lg" />
-        <Drawer opened={opened} onClose={closeDrawer } ta="center">
-          <Flex direction="column" justify="center" align="center">
+      <header className={classes.header} role="header">
+        <Container size="lg" className={classes.inner} >
+          <Group>
+            <Image src={ROELOGO.src} alt="ROE LINE logo" fit="contain" w="100" h="100" data-testid="logo"/>
+          </Group>
+          <Center  visibleFrom="sm">
             {items}
-          </Flex>
-        </Drawer>
-      </Container>
-    </header>
+          </Center>
+          <Burger opened={opened} onClick={toggleDrawer} hiddenFrom="sm" size="lg" role="burgermenu"
+          id="burgermenu"/>
+          <Drawer opened={opened} onClose={closeDrawer } ta="center"
+          id="drawer"
+          styles={{close:{'width':rem(50),'height':rem(50)}}}
+          closeButtonProps={{ 'aria-label': 'close' }}>
+            <Flex direction="column" justify="center" align="center">
+              {items}
+            </Flex>
+          </Drawer>
+        </Container>
+      </header>
   );
 }

@@ -16,23 +16,23 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
       </Box>
 
       <div>
-        <Text size="xs" className={classes.title}>
+        <Text size="xs" className={classes.title} role="contactTitle">
           {title}
         </Text>
-        <Text className={classes.description}>{description}</Text>
+        <Text className={classes.description} role="contactDescription">{description}</Text>
       </div>
     </div>
   );
 }
 
-const MOCKDATA = [
+const info = [
   { title: 'Email', description: 'import@roeline.net', icon: IconAt },
   { title: 'Phone', description: '909-468-1969', icon: IconPhone },
   { title: 'Address', description: '2705 S. Diamond Bar Blvd. #200, Diamond Bar, CA, 91765', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 5 p.m.', icon: IconSun },
+  { title: 'Working hours', description: '8:30 a.m. – 12 p.m., 1:00 p.m. - 5 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
-  const items = MOCKDATA.map((item, index) => <ContactIcon key={index} {...item} />);
+  const items = info.map((item, index) => <ContactIcon key={index} role="contactIcon" {...item} />);
   return <Stack>{items}</Stack>;
 }

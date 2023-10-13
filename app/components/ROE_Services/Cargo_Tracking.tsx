@@ -1,7 +1,6 @@
 import {IconTimeline, IconAccessible, IconHistory, IconAlertCircle } from '@tabler/icons-react';
 
-export const cargoTrackingDescription=`Our advanced tracking system puts you in control. 
-Monitor your cargo in real-time, 24/7. With us, you'll never lose sight of your shipments, no matter where they are in the world.`
+export const cargoTrackingDescription=`Monitor your cargo in real-time, 24/7. With us, you'll never lose sight of your shipments, no matter where they are in the world.`
 
 export const cargoTrackingIconFeatures = [
   {

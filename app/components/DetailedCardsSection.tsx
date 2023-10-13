@@ -38,21 +38,21 @@ const cargoTrackingFeatures:FeaturesCardData={mainTitle:'CARGO TRACKING', mainDe
 const cargoInsuranceFeatures:FeaturesCardData={mainTitle:'CARGO INSURANCE', mainDescription:cargoInsuranceDescription,featuresArray:cargoInsuranceIconFeatures, reversed:false, bgimage:cargoInsuranceImage}
 const customsClearanceFeatures:FeaturesCardData={mainTitle:'CUSTOMS CLEARANCE', mainDescription:customsDescription,featuresArray:customsIconFeatures, reversed:false, bgimage:customsImage}
 const transportRoutingFeatures:FeaturesCardData={mainTitle:'TRANSPORT ROUTING', mainDescription:transportRoutingDescription,featuresArray:transportRoutingIconFeatures, reversed:false, bgimage:transportRoutingImage}
-const consDeconsFeatures:FeaturesCardData={mainTitle:'CONSOL/DECONSOL', mainDescription:consolidationDescription,featuresArray:consolidationIconFeatures, reversed:false, bgimage:consolidationImage}
+const consDeconsFeatures:FeaturesCardData={mainTitle:'CONSOL AND DECONSOL', mainDescription:consolidationDescription,featuresArray:consolidationIconFeatures, reversed:false, bgimage:consolidationImage}
 
 const allFeatures=[cargoTrackingFeatures, cargoInsuranceFeatures, customsClearanceFeatures, transportRoutingFeatures, consDeconsFeatures]
 
 export default function DetailedCardsSection(){
     return(
-            
-        <Flex id="expertiseSection" justify="center" align="center" direction="column" ta="center">
+        <Flex id="expertiseSection" justify="center" align="center" direction="column" ta="center"
+        role="expertise">
             <Text p="xl" fz="36px" fw="900">Our Expertise</Text>
             {allFeatures.map((features,index)=>(
-                <div key={index}>
-                        <FeaturesCardTemplate features={{
-                        ...features,
-                        reversed: index % 2 === 0,
-                        }}/>
+                <div key={index} id={features.mainTitle} role="detailedCard">
+                    <FeaturesCardTemplate features={{
+                    ...features,
+                    reversed: index % 2 === 0,
+                    }}/>
                 </div>
             ))}
         </Flex>

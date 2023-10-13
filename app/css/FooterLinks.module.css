@@ -40,7 +40,9 @@
   flex-wrap: wrap;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

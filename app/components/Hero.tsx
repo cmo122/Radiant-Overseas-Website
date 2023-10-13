@@ -5,15 +5,15 @@ import {Link} from 'react-scroll';
 import LazyLoad from 'react-lazy-load';
 import '../css/lazyload.css'
 
-export function HeroImageRight() {
+export function Hero() {
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} role="hero">
         <Container size="lg">
           <div className={classes.inner}>
-            <div className={classes.content}>
+            <div className={classes.content} data-testid='title'>
               <LazyLoad>
-                <Title className={classes.title}>
+                <Title className={classes.title} >
                   Welcome to
                 <Text
                     component="span"
@@ -21,7 +21,7 @@ export function HeroImageRight() {
                     variant="gradient"
                     gradient={{from:"orange",to:"yellow"}}
                   >
-                  {' '}  ROE LINE{' '}
+                  {' '}  R.O.E LINE{' '}
                   </Text>
                 </Title>
               </LazyLoad>
@@ -31,6 +31,7 @@ export function HeroImageRight() {
               <Button
                 variant="gradient"
                 gradient={{ from: 'pink', to: 'yellow' }}
+                role="contactButton"
                 size="xl"
                 className={classes.control}
                 mt={40}>

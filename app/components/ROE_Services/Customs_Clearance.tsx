@@ -1,7 +1,6 @@
 import {IconArchive, IconMessage2Check, IconBrandSpeedtest, IconUmbrella } from '@tabler/icons-react';
 
-export const customsDescription=`Navigating the complex world of international trade can be overwhelming. 
-Our team of experienced customs experts handles all the necessary paperwork, regulations, and logistics, ensuring your shipments reach their destination smoothly and on time.`
+export const customsDescription=`Our team of experienced customs experts will ensure your shipments reach their destination smoothly and on time.`
 
 export const customsIconFeatures = [
   {
@@ -12,7 +11,7 @@ export const customsIconFeatures = [
   },
   {
     icon: IconMessage2Check,
-    title: 'Expert Guidance:',
+    title: 'Expert Guidance',
     description: `With our team of seasoned customs specialists, you'll have access to expert advice and support throughout the customs clearance process. 
     We keep you informed of any changes in regulations and help you make informed decisions.`,
   },

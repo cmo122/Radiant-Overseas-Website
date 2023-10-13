@@ -45,7 +45,7 @@
     height: rem(22px);
   }
 
-  @media (max-width: $mantine-breakpoint-sm)  {
+  @media (max-width: 767px)  {
     .link{
         width: rem(200px);
         height: rem(100px)

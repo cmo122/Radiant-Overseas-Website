@@ -26,6 +26,7 @@ export function FeaturesCardTemplate({ features }: { features: FeaturesCardData 
         radius="md"
         variant="gradient"
         gradient={{ deg: 133, from: 'orange', to: 'yellow' }}
+        role="cardsIcon"
       >
         <feature.icon style={{ width: rem(26), height: rem(26) }} stroke={1.5} />
       </ThemeIcon>

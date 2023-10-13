@@ -1,7 +1,7 @@
 import React from "react";
 import { MantineProvider} from '@mantine/core';
 import Header from "@/app/components/Header";
-import { HeroImageRight } from "@/app/components/Hero";
+import { Hero } from "@/app/components/Hero";
 import MainFeaturesCard from "@/app/components/MainFeaturesCard";
 import CarriersSection from "@/app/components/CarriersSection";
 import DetailedCardsSection from "@/app/components/DetailedCardsSection";
@@ -14,7 +14,7 @@ export default function App() {
     return (
             <MantineProvider>
                 <Header/>
-                <HeroImageRight/>
+                <Hero/>
                 <MainFeaturesCard/>
                 <CarriersSection/>
                 <DetailedCardsSection/>

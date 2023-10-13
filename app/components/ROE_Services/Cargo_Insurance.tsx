@@ -1,14 +1,12 @@
 import {IconShieldCheck, IconSettings, IconWorld, IconHelp } from '@tabler/icons-react';
 
-export const cargoInsuranceDescription=`We ensure that your shipments arrive safely at their destination, regardless of any unexpected challenges. 
-We provide comprehensive coverage and peace of mind, so you can focus on your business while we handle the rest.`
+export const cargoInsuranceDescription=`We ensure that your shipments arrive safely at their destination, regardless of any unexpected challenges`
 
 export const cargoInsuranceIconFeatures = [
   {
     icon: IconShieldCheck,
     title: 'Broad Coverage for All Risks',
-    description: `We offer all-risk coverage, protecting your shipments from a wide range of perils, including theft, damage, natural disasters, and accidents. 
-    You can ship with confidence knowing that your cargo is secure.`,
+    description: `We offer all-risk coverage, protecting your shipments from a wide range of perils, including theft, damage, natural disasters, and accidents.`,
   },
   {
     icon: IconSettings,
