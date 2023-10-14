@@ -2,9 +2,9 @@
   display: flex;
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
   border-radius: var(--mantine-radius-lg);
-  padding: rem(4px);
   border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
-
+  margin:0;
+  padding:0;
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
   }
@@ -54,12 +54,13 @@
   background-size: cover;
   background-position: center;
   border: rem(1px) solid transparent;
-  padding: var(--mantine-spacing-xl);
+  padding: var(--mantine-spacing-lg);
+  padding-right: 0;
   flex: 0 0 rem(280px);
+  min-width: rem(319px);
 
   @media (max-width: $mantine-breakpoint-sm) {
     margin-bottom: var(--mantine-spacing-sm);
-    padding-left: var(--mantine-spacing-md);
   }
 }
 
