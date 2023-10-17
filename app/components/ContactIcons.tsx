@@ -73,7 +73,7 @@ const info = [
   { title: 'Email', description: 'import@roeline.net', icon: IconAt },
   { title: 'Phone', description: '909-468-1969', icon: IconPhone },
   { title: 'Address', description: '2705 S. Diamond Bar Blvd. #200, Diamond Bar CA 91765', icon: IconMapPin },
-  { title: 'Working hours', description: '8:30 a.m. – 12 p.m., 1:00 p.m. - 5 p.m.', icon: IconSun },
+  { title: 'Working hours', description: '8:30 a.m. - 12 p.m., 1:00 p.m. - 5 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
