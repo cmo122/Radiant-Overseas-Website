@@ -1,4 +1,4 @@
-import {  Container, Group, Image, Text } from '@mantine/core';
+import {  Container, Image, Text } from '@mantine/core';
 import ROELogo from '../assets/logos/ROELINELOGO.png'
 import classes from '../css/FooterLinks.module.css';
 import {scroller} from 'react-scroll'
