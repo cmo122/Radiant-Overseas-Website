@@ -51,9 +51,7 @@ export default function Footer() {
     <footer className={classes.footer} role="footer">
       <Container className={classes.inner}>
         <div className={classes.logo}>
-        <Group>
-          <Image src={ROELogo.src} alt="ROE LINE logo" />
-        </Group>
+          <Image className={classes.logoImage} src={ROELogo.src} alt="ROE LINE logo" />
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
